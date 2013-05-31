@@ -4,6 +4,7 @@ require 'tolk/config'
 require 'tolk/engine'
 require 'tolk/sync'
 require 'tolk/import'
+require 'tolk/unobtrusive_yaml_column'
 
 module Tolk
   # Setup Tolk
