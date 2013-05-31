@@ -40,11 +40,11 @@
                 </div>
                 <div class="original">
                   <span class="key">Original</span>
-                  <%= format_i18n_value(phrase.translations.primary.previous_text) -%>
+                  <%= format_i18n_value(phrase.translations.primary.previous_text, :substitute_new_lines => false) -%>
                 </div>
               <% else %>
                 <div class="original">
-                  <%= format_i18n_value(phrase.translations.primary.text) -%>
+                  <%= format_i18n_value(phrase.translations.primary.text, :substitute_new_lines => false) -%>
                 </div>
                 <div class="value">
                   <%= format_i18n_value(phrase.translations.primary.text) -%>

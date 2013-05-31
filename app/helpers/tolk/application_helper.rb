@@ -1,7 +1,12 @@
 module Tolk
   module ApplicationHelper
-    def format_i18n_value(value)
-      h(yaml_value(value)).gsub(/\n/, '<span class="carriage_return">&crarr;</span><br />').html_safe
+    def format_i18n_value(value, options={})
+      options = {:substitute_new_lines => true}.merge(options)
+      formatted_value = h(yaml_value(value))
+      if options[:substitute_new_lines]
+        formatted_value.gsub!(/\n/, '<span class="carriage_return">&crarr;</span><br />')
+      end
+      formatted_value.html_safe
     end
 
     def format_i18n_text_area_value(value)
