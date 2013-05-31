@@ -2,7 +2,7 @@ $(function () {
   var interpolation = new RegExp("%{\\w+}", "g");
 
   $(".phrase .value").each(function () {
-    var text = $('<div/>').text($(this).text()).html()
+    var text = $('<div/>').html($(this).text())
       , token_text;
 
     token_text = text.replace(interpolation, function (match) {
